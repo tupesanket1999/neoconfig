@@ -1,8 +1,7 @@
-
 "neo commands
 "
 "set mouse=a
-"set termguicolors
+set termguicolors
 set guicursor=
 set lazyredraw
 set relativenumber
