@@ -39,6 +39,20 @@ nnoremap <C-w>v :belowright vsplit<CR>
 
 nnoremap <leader>t :terminal<CR>
 
+nmap <leader>a <Plug>(coc-codeaction)
+
 if has('nvim')
     tnoremap <Esc> <C-\><C-n>
 endif
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_save= 1
+let g:ale_lint_on_text_changed= 'never'
+let g:ale_completion_delay =0 
+let g:ale_lsp_suggestions=1
+
+source ~/.config/nvim/telescope.vim
+source ~/.config/nvim/lsp.vim
+source ~/.config/nvim/autocomplete.vim
+source ~/.config/nvim/git.vim
+source ~/.config/nvim/vimspector.vim
+source ~/.config/nvim/tree.vim
