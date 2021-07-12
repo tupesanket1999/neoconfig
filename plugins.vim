@@ -23,7 +23,8 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'hrsh7th/nvim-compe'
 Plug 'Raimondi/delimitMate'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
+Plug 'jose-elias-alvarez/null-ls.nvim'
 
 "NODE
 "

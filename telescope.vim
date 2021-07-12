@@ -4,6 +4,7 @@
 
 "" Using lua functions
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fa <cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files cwd=~<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr> Find files using Telescope command-line sugar.
