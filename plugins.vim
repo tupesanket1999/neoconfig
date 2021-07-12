@@ -25,6 +25,11 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'Raimondi/delimitMate'
 Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'onsails/lspkind-nvim'
+Plug 'RRethy/vim-illuminate'
+Plug 'folke/trouble.nvim'
+Plug 'glepnir/lspsaga.nvim'
+
 
 "NODE
 "
