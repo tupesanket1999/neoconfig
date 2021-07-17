@@ -1,27 +1,3 @@
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-    custom_captures = {
-      -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
-      ["foo.bar"] = "Identifier",
-    },
-  },
-}
-require'nvim-treesitter.configs'.setup {
-  incremental_selection = {
-    enable = true,
-    keymaps = {
-      init_selection = "gnn",
-      node_incremental = "grn",
-      scope_incremental = "grc",
-      node_decremental = "grm",
-    },
-  },
-}
-EOF
-" -------------------- LSP --------------------------------- TSSERVER
-lua << EOF
   local nvim_lsp = require('lspconfig')
   local saga = require 'lspsaga'
   saga.init_lsp_saga{
@@ -59,7 +35,7 @@ nvim_lsp.tsserver.setup{
 
             -- formatting
             enable_formatting = true,
-            formatter = "prettier_d_slim",
+            formatter = "prettier",
             formatter_config_fallback = nil,
 
             -- update imports on file move
@@ -187,20 +163,3 @@ require('lspkind').init({
     },
 })
 
-EOF
-nnoremap <leader>xx <cmd>TroubleToggle<cr>
-nnoremap <leader>xw <cmd>TroubleToggle lsp_workspace_diagnostics<cr>
-nnoremap <leader>xd <cmd>TroubleToggle lsp_document_diagnostics<cr>
-nnoremap <leader>xq <cmd>TroubleToggle quickfix<cr>
-nnoremap <leader>xl <cmd>TroubleToggle loclist<cr>
-nnoremap <leader>xr <cmd>TroubleToggle lsp_references<cr>
-lua <<EOF
-
-EOF
-nnoremap <silent>K :Lspsaga hover_doc<CR>
-nnoremap <silent><leader>gh <cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>
-nnoremap <silent><leader>a :Lspsaga code_action<CR>
-nnoremap <silent><leader>rn :Lspsaga rename<CR>
-nnoremap <silent> [e :Lspsaga diagnostic_jump_next<CR>
-nnoremap <silent> ]e :Lspsaga diagnostic_jump_prev<CR>
-nnoremap <silent><leader>gr <cmd>lua require'lspsaga.provider'.lsp_finder()<CR>

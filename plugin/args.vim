@@ -37,3 +37,7 @@ set colorcolumn=80
 set showtabline=2
 
 set completeopt=menuone,noselect,noinsert
+
+"LeaderKey
+"
+let mapleader = " "

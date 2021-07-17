@@ -1,53 +1,51 @@
-source ~/.config/nvim/args.vim
-source ~/.config/nvim/plugins.vim
-source ~/.config/nvim/color.vim
+call plug#begin('~/.vim/plugged')
 
-
-"Airline options
+"colorscheme
 "
-"let g:airline_theme='base16'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'default'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#whitespace#enabled = 0
+Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 
-
-"LeaderKey
+"Airline powerline
 "
-let mapleader = " "
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
 
-
-"KeyRemaps
+"telescope
 "
-inoremap jj <esc>
-nnoremap zz :w<CR>
-nnoremap zq :bp<bar>sp<bar>bn<bar>bd<CR>
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
-nnoremap <leader>h :wincmd h<CR>                                                
-nnoremap <leader>j :wincmd j<CR>                                                
-nnoremap <leader>k :wincmd k<CR>                                                
-nnoremap <leader>l :wincmd l<CR>
-
-nnoremap <C-k> :bn<CR>
-nnoremap <C-j> :bp<CR>
-
-nnoremap <Leader>+ :vertical resize +5<CR>                                      
-nnoremap <Leader>- :vertical resize -5<CR>
-
-nnoremap <C-w>s :belowright split<CR>
-nnoremap <C-w>v :belowright vsplit<CR>
-
-nnoremap <leader>t :terminal<CR>
-nnoremap <leader>u :UndotreeShow<CR>
-
-if has('nvim')
-    tnoremap <Esc> <C-\><C-n>
-endif
-source ~/.config/nvim/telescope.vim
-source ~/.config/nvim/lsp.vim
-source ~/.config/nvim/autocomplete.vim
-source ~/.config/nvim/git.vim
-source ~/.config/nvim/vimspector.vim
-source ~/.config/nvim/tree.vim
+"LSP
+"
+Plug 'neovim/nvim-lspconfig'
+Plug 'kabouzeid/nvim-lspinstall'
+Plug 'hrsh7th/nvim-compe'
+Plug 'Raimondi/delimitMate'
+Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'onsails/lspkind-nvim'
+Plug 'RRethy/vim-illuminate'
+Plug 'folke/trouble.nvim'
+Plug 'glepnir/lspsaga.nvim'
 
 
+"NODE
+"
+Plug 'puremourning/vimspector'
+Plug 'szw/vim-maximizer'
+
+"git
+"
+Plug 'lewis6991/gitsigns.nvim'
+
+Plug 'preservim/nerdcommenter'
+Plug 'mbbill/undotree'
+Plug 'tpope/vim-surround'
+Plug 'kyazdani42/nvim-tree.lua'
+
+call plug#end()
+lua require("sanket")

@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 "colorscheme
 "
 Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 
 "Airline powerline
 "
@@ -44,5 +45,4 @@ Plug 'preservim/nerdcommenter'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-surround'
 Plug 'kyazdani42/nvim-tree.lua'
-
 call plug#end()

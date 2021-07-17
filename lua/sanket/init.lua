@@ -1,0 +1,5 @@
+require("sanket.compe")
+require("sanket.git")
+require("sanket.lsp")
+require("sanket.telescope")
+require("sanket.treesitter")
