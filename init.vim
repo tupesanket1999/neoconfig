@@ -41,6 +41,7 @@ Plug 'szw/vim-maximizer'
 "git
 "
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'tpope/vim-fugitive'
 
 Plug 'preservim/nerdcommenter'
 Plug 'mbbill/undotree'

@@ -44,7 +44,7 @@ nnoremap <silent><leader>a :Lspsaga code_action<CR>
 nnoremap <silent><leader>rn :Lspsaga rename<CR>
 nnoremap <silent> [e :Lspsaga diagnostic_jump_next<CR>
 nnoremap <silent> ]e :Lspsaga diagnostic_jump_prev<CR>
-nnoremap <silent><leader>gr <cmd>lua require'lspsaga.provider'.lsp_finder()<CR>
+nnoremap <silent><leader>gr <cmd>lua require"telescope.builtin.lsp".references()<CR>
 nnoremap <silent> <A-d> :Lspsaga open_floaterm<CR>
 tnoremap <silent> <A-d> <C-\><C-n>:Lspsaga close_floaterm<CR>
 
@@ -70,3 +70,4 @@ nnoremap <C-p> :lua require('telescope.builtin').git_files()<CR>
 nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
+
