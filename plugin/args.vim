@@ -41,5 +41,4 @@ set completeopt=menuone,noselect,noinsert
 "LeaderKey
 "
 let mapleader = " "
-set statusline+=%{get(b:,'gitsigns_status','')}
 

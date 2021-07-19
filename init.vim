@@ -5,10 +5,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 
-"Airline powerline
+"powerline
 "
-Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-airline/vim-airline'
+Plug 'hoob3rt/lualine.nvim'
+Plug 'akinsho/nvim-bufferline.lua'
 
 "telescope
 "
